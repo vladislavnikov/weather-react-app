@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { city } from './City.js';
 import './App.css';
 
 const api = {
@@ -7,7 +8,7 @@ const api = {
 
 function App() {
   const [weather, setWeather] = useState("");
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState(city);
 
   useEffect(() => {
     btnClicked(); 
