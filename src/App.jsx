@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { city } from './City.js';
+import GetCity from './common/city';
 import './App.css';
 
 const api = {
   key: "a829b3fc7620a6e8a58d3691c66e51ef"
 };
+
+const city = await GetCity();
 
 function App() {
   const [weather, setWeather] = useState("");
@@ -17,19 +19,25 @@ function App() {
   const btnClicked = () => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api.key}&units=metric`)
       .then(response => response.json())
-      .then(json => setWeather(json))};
+      .then(json => setWeather(json))
+
+      document.getElementById('location').value = '';
+    };
 
       return (
         <div className="App">
           <h1>Weather App</h1>
           <div>
-            <input
-            className="input-location"
-              type="text"
-              placeholder="Enter city/town..."
-              onChange={(e) => setLocation(e.target.value)}
-            />
-            <button onClick={btnClicked}>Search</button>
+           
+              <input
+              id='location'
+              className="input-location"
+                type="text"
+                placeholder="Enter city/town..."
+                onChange={(e) => setLocation(e.target.value)}
+              />
+              <button onClick={btnClicked}>Search</button>
+           
           </div>
           
           {typeof weather.main !== "undefined" ? (
