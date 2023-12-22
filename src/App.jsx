@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GetCity from './common/city';
-import './App.css';
+import '../public/styles/App.css';
+import Search from './assets/search.png';
 
 const api = {
   key: "a829b3fc7620a6e8a58d3691c66e51ef"
@@ -27,23 +28,22 @@ function App() {
       return (
         <div className="App">
           <h1>Weather App</h1>
-          <div>
+          <div class="search-wrapper">
            
               <input
               id='location'
-              className="input-location"
                 type="text"
                 placeholder="Enter city/town..."
                 onChange={(e) => setLocation(e.target.value)}
               />
-              <button onClick={btnClicked}>Search</button>
+              <button className="btn-search" onClick={btnClicked}>S</button>
            
           </div>
           
           {typeof weather.main !== "undefined" ? (
-            <div>
+            <div className='main-wrapper'>
               <p>{weather.name}</p>
-              <p>{Math.floor(weather.main.temp)}°C</p>
+              <h2>{Math.floor(weather.main.temp)}°C</h2>
               <p>{weather.weather[0].main}</p>
               <p>({weather.weather[0].description})</p>
             </div>
