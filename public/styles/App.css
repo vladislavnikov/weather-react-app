@@ -3,71 +3,89 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  width: 300px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }
 
-.main-wrapper {
-  background-color: white;
+h1{
+  font-family: 'Brush Script MT', cursive;
+  color: #FFD700;
+  margin: 0;
+}
+
+.search-wrapper {
+  background-color: #F8F8FF;
+  text-align: center;
   border-radius: 5px;
-  color: black;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin-top: 5px;
-}
-
-.search-wrapper{
+  margin: 1px;
+  padding: 5px;
   display: flex;
-  background-color: white;
-  border-radius: 5px;
-  padding-bottom: 2px;
-  padding-top: 2px;
+  justify-content: space-between;
+}
+
+input {
+  outline: 0;
+  background-color: #F8F8FF;
+  border-width: 0 0 2px;
+  border-color: SlateBlue;
+  width: 89%;
   color: black;
-  justify-content: space-evenly;
 }
-
-.read-the-docs {
-  color: #888;
-}
-
-#location{
-  background-color: white;
+input:focus {
   border-color: blue;
-  width: 40%;
-  color: black;
-  }
+  outline: 1px;
+}
 
   .btn-search{
-    background-color: white;
-    border-radius: 50%;
-    width: 7%;
-    border-color: blue;
-    background: url('./assets/search.png');
-    color: blue;
+    border: none;
+    border-left: 2px DodgerBlue solid;
+    background-color:#F8F8FF ;
+  }
+  .btn-search:focus{
+    background-color:DodgerBlue ;
+    border-radius: 25%;
+  }
+  .btn-search:hover{
+    background-color:lightblue ;
+    border-radius:  0 25% 25% 0;
+  }
+
+  .main-wrapper {
+    text-align: center;
+    background-color: #F8F8FF;
+    color: black;
+    border-radius: 5px;
+    margin: 10px 0;
+    height: 230px;
+  }
+
+  .city{
+    font-size: 22px;
+    position: relative;
+    top: 10px;
+  }
+  
+  h2{
+    font-size: 22px;
+    position: relative;
+    bottom: 10px;
+  }
+
+  h3{
+    position: relative;
+    bottom: 30px;
+  }
+  
+  img{
+    height: 90px;
+    width: 90px;
+  }
+  
+  .weather{
+    font-size: 0.875em;
+    font-style: italic;
+    position: relative;
+    bottom: 50px;
   }
