@@ -20,7 +20,7 @@ const WeatherImages = {
 
 
 const api = {
-  key: "a829b3fc7620a6e8a58d3691c66e51ef",
+  key: {api.key},
 };
 
 const city = await GetCity();
