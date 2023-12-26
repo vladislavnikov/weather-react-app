@@ -1,7 +1,7 @@
 
 # Weather App by ReactJS
 
-Web application that shows the forecast of a city. There are 2 APIs provided in this project. One is for tracking the location of the current user which idea is to show what the weather is in the area (or nearest city) that the user is in.The other one is for showing what the weather is in selected city by the user if they want to check different city. 
+Web application that shows the forecast of a city. There are 2 APIs included in this project. One is for tracking the location of the current user, with the idea of displaying the weather in the user's area (or nearest city).The other API is for showing the weather in selected city by the user if they want to check different locations. 
 
 
 
